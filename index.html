@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name - Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  header {
+    background: #1f1f1f;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+  }
+  nav a {
+    color: #e0e0e0;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    color: #61dafb;
+  }
+  main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  /* Contact form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-bottom: 0.25rem;
+  }
+  input, textarea {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+  }
+  button {
+    background: #61dafb;
+    border: none;
+    color: #121212;
+    font-weight: 700;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #21a1f1;
+  }
+  /* Blog styling */
+  article {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+  }
+  article h3 {
+    margin-top: 0;
+  }
+  footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem;
+    color: #888;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Your Name</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am [Your Name], a passionate professional interested in [your interests]. This is my personal website to share my work, thoughts, and contact information. You can update this section anytime you want to reflect your latest info.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <!-- Example blog posts -->
+    <article>
+      <h3>Welcome to My Blog</h3>
+      <p>This is the first post on my professional blog. Stay tuned for updates, tutorials, and insights.</p>
+      <small>Posted on July 30, 2025</small>
+    </article>
+
+    <article>
+      <h3>Another Post</h3>
+      <p>More content to demonstrate blog layout. Replace with your own posts.</p>
+      <small>Posted on July 25, 2025</small>
+    </article>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" onsubmit="sendMessage(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Your Name. All rights reserved.
+</footer>
+
+<script>
+  // Placeholder function for sending contact form data
+  function sendMessage(event) {
+    event.preventDefault();
+    const status = document.getElementById('form-status');
+    // Here you can integrate with an email API or form service like Formspree, EmailJS, etc.
+    status.textContent = 'Thank you for your message! I will get back to you soon.';
+    event.target.reset();
+  }
+</script>
+</body>
+</html>
